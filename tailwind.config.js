@@ -12,6 +12,7 @@ export default {
           4: "#7ADB78",
           5: "#858DFF",
           6: "#FF98E2",
+          7: "#fcfbf2",
         },
         stroke: {
           1: "#26242C",
@@ -21,6 +22,7 @@ export default {
           black: "#000000",
           sky: "#80e2ed",
           skydark: "#0f6273",
+          darkgray: "#535756",
         },
         n: {
           1: "#FFFFFF",
