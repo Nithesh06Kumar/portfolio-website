@@ -4,7 +4,7 @@ import { Outlet } from "react-router-dom";
 
 const Layout = () => {
   return (
-    <div className="xl:px-64 lg:px-[8rem] px-[2rem] bg-themecolor-white dark:bg-themecolor-black h-screen">
+    <div className="xl:px-64 lg:px-[8rem] md:px-[2rem] bg-themecolor-white dark:bg-themecolor-black">
       <NavBar />
       <Outlet />
     </div>

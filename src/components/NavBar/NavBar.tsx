@@ -6,18 +6,21 @@ import {
   setThemeToLocalStore,
 } from "../../utils/LocalStore";
 import MenuSvg from "../../assets/navigation/hamburgerMenu";
+import { HashLink as Link } from "react-router-hash-link";
 const NavBar = () => {
-  const [theme, setTheme] = useState(getThemeFromLocalStore() || "light");
+  const [theme, setTheme] = useState(getThemeFromLocalStore());
   const [openNavigation, setOpenNavigation] = useState(false);
   const handleThemeLight = () => {
     setTheme("light");
     setThemeToLocalStore("light");
     document.body.classList.toggle("dark");
+    handleHamburgerClick();
   };
   const handleThemeDark = () => {
     setTheme("dark");
     setThemeToLocalStore("dark");
     document.body.classList.toggle("dark");
+    handleHamburgerClick();
   };
   const handleHamburgerClick = () => {
     setOpenNavigation((prev) => !prev);
@@ -27,10 +30,14 @@ const NavBar = () => {
     <div
       className={`${
         openNavigation &&
-        "absolute top-0 left-0 right-0 z-50 bg-white dark:bg-themecolor-black "
-      } flex flex-col  md:flex-row py-5 justify-between border-b-2`}
+        "absolute top-0 left-0 right-0 z-50 bg-color-7 dark:bg-themecolor-darkgray "
+      } flex flex-col  md:flex-row py-5 justify-between border-b-2 sticky md:relative top-0 z-50  bg-themecolor-white dark:bg-themecolor-black`}
     >
-      <div className={`${openNavigation && "mb-[50px]"} pl-8 md:pl-0 md:mb-0 `}>
+      <div
+        className={`${
+          openNavigation && "mb-[50px]"
+        } sm:pl-8 pl-4 md:pl-0 md:mb-0 `}
+      >
         <NavLink to="/" onClick={handleHamburgerClick}>
           <h2 className="text-xl font-medium text-themecolor-black dark:text-themecolor-sky">
             NITHESH KUMAR
@@ -49,12 +56,12 @@ const NavBar = () => {
               </NavLink>
             </li>
             <li className="hover:text-color-1 transition-colors dark:hover:text-themecolor-skydark md:dark:hover:text-themecolor-sky py-4 md:py-0 hover:bg-slate-200 md:hover:bg-white">
-              <NavLink
-                to="/about"
+              <Link
+                to="#about"
                 onClick={openNavigation ? handleHamburgerClick : undefined}
               >
                 About
-              </NavLink>
+              </Link>
             </li>
             <li className="hover:text-color-1 transition-colors dark:hover:text-themecolor-skydark md:dark:hover:text-themecolor-sky py-4 md:py-0 hover:bg-slate-200 md:hover:bg-white">
               <NavLink
@@ -110,7 +117,7 @@ const NavBar = () => {
           </ul>
         </div>
       </nav>
-      <div className="md:hidden absolute right-12 top-5">
+      <div className="md:hidden absolute sm:right-12 right-6 top-5">
         <button onClick={handleHamburgerClick}>
           <MenuSvg
             openNavigation={openNavigation}

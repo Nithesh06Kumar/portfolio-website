@@ -10,8 +10,12 @@ import {
 function App() {
   useEffect(() => {
     const theme = getThemeFromLocalStore();
+
     if (!theme) {
       setThemeToLocalStore("light");
+    }
+    if (theme === "dark") {
+      document.body.classList.add("dark");
     }
   });
 
