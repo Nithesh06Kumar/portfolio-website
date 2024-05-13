@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { NavLink } from "react-router-dom";
 import { images } from "../../assets";
 import {
@@ -7,24 +7,39 @@ import {
 } from "../../utils/LocalStore";
 import MenuSvg from "../../assets/navigation/hamburgerMenu";
 import { HashLink as Link } from "react-router-hash-link";
+import useWindowDimensions from "../../hooks/useWindowDiamention";
 const NavBar = () => {
   const [theme, setTheme] = useState(getThemeFromLocalStore());
   const [openNavigation, setOpenNavigation] = useState(false);
+  //   const { width } = useWindowDimensions();
+
   const handleThemeLight = () => {
     setTheme("light");
     setThemeToLocalStore("light");
     document.body.classList.toggle("dark");
-    handleHamburgerClick();
+    handleMenuItemsClick();
   };
   const handleThemeDark = () => {
     setTheme("dark");
     setThemeToLocalStore("dark");
     document.body.classList.toggle("dark");
-    handleHamburgerClick();
+    handleMenuItemsClick();
+  };
+  const handleMenuItemsClick = () => {
+    if (openNavigation) {
+      setOpenNavigation((prev) => !prev);
+    }
   };
   const handleHamburgerClick = () => {
     setOpenNavigation((prev) => !prev);
   };
+
+  //   useEffect(() => {
+  //     if (width > 770 && openNavigation) {
+  //       console.log("Triggered,width>770");
+  //       setOpenNavigation(false);
+  //     }
+  //   }, [width]);
 
   return (
     <div
@@ -38,7 +53,7 @@ const NavBar = () => {
           openNavigation && "mb-[50px]"
         } sm:pl-8 pl-4 md:pl-0 md:mb-0 `}
       >
-        <NavLink to="/" onClick={handleHamburgerClick}>
+        <NavLink to="/">
           <h2 className="text-xl font-medium text-themecolor-black dark:text-themecolor-sky">
             NITHESH KUMAR
           </h2>
@@ -47,42 +62,46 @@ const NavBar = () => {
       <nav className={`${openNavigation ? "block" : "hidden"} md:flex`}>
         <div className="block md:flex ">
           <ul className="md:flex block md:space-x-8 text-base font-medium  text-themecolor-black dark:text-themecolor-white text-center md:text-left">
-            <li className="hover:text-color-1 transition-colors dark:hover:text-themecolor-skydark md:dark:hover:text-themecolor-sky py-4 md:py-0 hover:bg-slate-200 md:hover:bg-white">
+            <li
+              className={
+                "hover:text-color-1 transition-colors dark:hover:text-themecolor-skydark md:dark:hover:text-themecolor-sky py-4 md:py-0 hover:bg-slate-200 md:hover:bg-transparent"
+              }
+            >
               <NavLink
                 to="/"
-                onClick={openNavigation ? handleHamburgerClick : undefined}
+                onClick={openNavigation ? handleMenuItemsClick : undefined}
               >
                 Home
               </NavLink>
             </li>
-            <li className="hover:text-color-1 transition-colors dark:hover:text-themecolor-skydark md:dark:hover:text-themecolor-sky py-4 md:py-0 hover:bg-slate-200 md:hover:bg-white">
+            <li className="hover:text-color-1 transition-colors dark:hover:text-themecolor-skydark md:dark:hover:text-themecolor-sky py-4 md:py-0 hover:bg-slate-200 md:hover:bg-transparent">
               <Link
-                to="#about"
-                onClick={openNavigation ? handleHamburgerClick : undefined}
+                to="/#about"
+                onClick={openNavigation ? handleMenuItemsClick : undefined}
               >
                 About
               </Link>
             </li>
-            <li className="hover:text-color-1 transition-colors dark:hover:text-themecolor-skydark md:dark:hover:text-themecolor-sky py-4 md:py-0 hover:bg-slate-200 md:hover:bg-white">
+            <li className="hover:text-color-1 transition-colors dark:hover:text-themecolor-skydark md:dark:hover:text-themecolor-sky py-4 md:py-0 hover:bg-slate-200 md:hover:bg-transparent">
               <NavLink
                 to="/resume"
-                onClick={openNavigation ? handleHamburgerClick : undefined}
+                onClick={openNavigation ? handleMenuItemsClick : undefined}
               >
                 Resume
               </NavLink>
             </li>
-            <li className="hover:text-color-1 transition-colors dark:hover:text-themecolor-skydark md:dark:hover:text-themecolor-sky py-4 md:py-0 hover:bg-slate-200 md:hover:bg-white">
+            <li className="hover:text-color-1 transition-colors dark:hover:text-themecolor-skydark md:dark:hover:text-themecolor-sky py-4 md:py-0 hover:bg-slate-200 md:hover:bg-transparent">
               <NavLink
                 to="/portfolio"
-                onClick={openNavigation ? handleHamburgerClick : undefined}
+                onClick={openNavigation ? handleMenuItemsClick : undefined}
               >
                 Portfolio
               </NavLink>
             </li>
-            <li className="hover:text-color-1 transition-colors dark:hover:text-themecolor-skydark md:dark:hover:text-themecolor-sky py-4 md:py-0 hover:bg-slate-200 md:hover:bg-white">
+            <li className="hover:text-color-1 transition-colors dark:hover:text-themecolor-skydark md:dark:hover:text-themecolor-sky py-4 md:py-0 hover:bg-slate-200 md:hover:bg-transparent">
               <NavLink
                 to="/contact"
-                onClick={openNavigation ? handleHamburgerClick : undefined}
+                onClick={openNavigation ? handleMenuItemsClick : undefined}
               >
                 Contact
               </NavLink>

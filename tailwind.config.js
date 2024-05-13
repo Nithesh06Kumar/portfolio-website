@@ -8,9 +8,9 @@ export default {
         color: {
           1: "#8e11d6",
           2: "#80e2ed",
-          3: "#f2af29",
-          4: "#7ADB78",
-          5: "#858DFF",
+          3: "#ffbf00",
+          4: "#454440",
+          5: "#c99504",
           6: "#FF98E2",
           7: "#fcfbf2",
         },
@@ -23,6 +23,7 @@ export default {
           sky: "#80e2ed",
           skydark: "#0f6273",
           darkgray: "#535756",
+          gold: "#ffbf00",
         },
         n: {
           1: "#FFFFFF",
