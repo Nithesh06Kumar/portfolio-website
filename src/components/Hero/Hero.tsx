@@ -4,12 +4,14 @@ import { FaXTwitter, FaGithub, FaLinkedinIn } from "react-icons/fa6";
 import { SiGmail } from "react-icons/si";
 import { MdAddIcCall } from "react-icons/md";
 import { motion } from "framer-motion";
+import useWindowDimensions from "../../hooks/useWindowDiamention";
 
 const Hero: React.FC = () => {
+  const { width } = useWindowDimensions();
   return (
     <div className=" md:flex md:justify-between md:w-full sm:ml-0">
       <motion.div
-        initial={{ y: 0, x: 300 }}
+        initial={{ y: 0, x: width > 768 ? 300 : 0 }}
         animate={{
           y: 30,
           transition: {
@@ -47,7 +49,7 @@ const Hero: React.FC = () => {
         </p>
       </div>
 
-      <div className="flex space-x-5 mt-[40px] justify-center order-1 md:block md:content-start md:space-x-0 md:mt-[90px] dark:border-[1px] md:dark:border-0 md:dark:p-0 dark:p-2 dark:rounded-full dark:border-themecolor-white">
+      <div className="flex space-x-5 mt-[40px] justify-center order-1 md:block md:content-start md:space-x-0 md:mt-[90px] dark:border-[1px] md:dark:border-0 md:dark:p-0 dark:p-2 dark:rounded-full dark:border-themecolor-white dark:mx-8">
         <a
           href="https://x.com/Nithesh37989222"
           target="_blank"

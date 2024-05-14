@@ -23,6 +23,7 @@ const Contact: React.FC = () => {
         ></iframe>
       </div>
       <div className="flex flex-col md:flex-row justify-center items-center md:items-start md:justify-evenly">
+        {/* Contact Info */}
         <div className="space-y-3 flex-1 lg:flex-none xl:flex-1">
           <h2 className="text-xl font-semibold mb-6 mt-4 text-center flex flex-col items-start dark:text-themecolor-white">
             Contact Info

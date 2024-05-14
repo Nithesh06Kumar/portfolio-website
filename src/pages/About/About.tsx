@@ -13,7 +13,7 @@ const About: React.FC = () => {
       <h2 className="text-3xl  font-semibold text-center mb-10 dark:text-themecolor-white">
         About Me
       </h2>
-      <div className="flex justify-between space-x-4 items-center px-16 md:px-0">
+      <div className="flex justify-between space-x-4 items-center px-12 md:px-0">
         <img
           src={images.mobiledev}
           alt="mobile-dev"
