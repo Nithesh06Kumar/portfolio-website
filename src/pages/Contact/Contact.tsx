@@ -3,7 +3,7 @@ import { MdAddIcCall } from "react-icons/md";
 import { SiGmail } from "react-icons/si";
 import { FaLocationDot } from "react-icons/fa6";
 import { FaLocationArrow } from "react-icons/fa6";
-const Contact = () => {
+const Contact: React.FC = () => {
   return (
     <div className="pb-6 mx-3 md:mx-8">
       <h2 className="text-3xl font-semibold mb-6 mt-4 text-center flex flex-col items-center dark:text-themecolor-white">

@@ -1,10 +1,9 @@
 import React from "react";
-import Hero from "../../components/Hero/Hero";
 import { images } from "../../assets";
 import Button from "../../components/Button/Button";
 import { MdOutlineFileDownload } from "react-icons/md";
 
-const About = () => {
+const About: React.FC = () => {
   return (
     <div
       id="about"

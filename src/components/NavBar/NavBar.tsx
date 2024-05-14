@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 import { NavLink } from "react-router-dom";
 import { images } from "../../assets";
 import {
@@ -7,8 +7,8 @@ import {
 } from "../../utils/LocalStore";
 import MenuSvg from "../../assets/navigation/hamburgerMenu";
 import { HashLink as Link } from "react-router-hash-link";
-import useWindowDimensions from "../../hooks/useWindowDiamention";
-const NavBar = () => {
+
+const NavBar: React.FC = () => {
   const [theme, setTheme] = useState(getThemeFromLocalStore());
   const [openNavigation, setOpenNavigation] = useState(false);
   //   const { width } = useWindowDimensions();
