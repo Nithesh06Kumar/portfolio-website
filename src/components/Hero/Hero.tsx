@@ -61,7 +61,11 @@ const Hero: React.FC = () => {
           />
         </a>
         <a
-          href="https://mail.google.com/mail/?view=cm&to=nitheshkumar0612@gmail.com"
+          href={
+            width >= 768
+              ? "https://mail.google.com/mail/?view=cm&to=nitheshkumar0612@gmail.com"
+              : "mailto:nitheshkumar0612@gmail.com"
+          }
           target="_blank"
           rel="noopener noreferrer"
         >
