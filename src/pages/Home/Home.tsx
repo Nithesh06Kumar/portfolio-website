@@ -11,8 +11,8 @@ const Home: React.FC = () => {
         <Hero />
       </div>
       <About />
+      <Divider className="md:hidden" />
       <div className="mb-8 md:hidden px-10">
-        <Divider />
         <Skills />
       </div>
     </>
