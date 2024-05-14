@@ -70,6 +70,9 @@ const NavBar: React.FC = () => {
               <NavLink
                 to="/"
                 onClick={openNavigation ? handleMenuItemsClick : undefined}
+                className={({ isActive }) =>
+                  isActive ? "text-color-1 dark:text-themecolor-sky" : undefined
+                }
               >
                 Home
               </NavLink>
@@ -84,6 +87,9 @@ const NavBar: React.FC = () => {
             </li>
             <li className="hover:text-color-1 transition-colors dark:hover:text-themecolor-skydark md:dark:hover:text-themecolor-sky py-4 md:py-0 hover:bg-slate-200 md:hover:bg-transparent">
               <NavLink
+                className={({ isActive }) =>
+                  isActive ? "text-color-1 dark:text-themecolor-sky" : undefined
+                }
                 to="/resume"
                 onClick={openNavigation ? handleMenuItemsClick : undefined}
               >
@@ -92,6 +98,9 @@ const NavBar: React.FC = () => {
             </li>
             <li className="hover:text-color-1 transition-colors dark:hover:text-themecolor-skydark md:dark:hover:text-themecolor-sky py-4 md:py-0 hover:bg-slate-200 md:hover:bg-transparent">
               <NavLink
+                className={({ isActive }) =>
+                  isActive ? "text-color-1 dark:text-themecolor-sky" : undefined
+                }
                 to="/portfolio"
                 onClick={openNavigation ? handleMenuItemsClick : undefined}
               >
@@ -100,6 +109,9 @@ const NavBar: React.FC = () => {
             </li>
             <li className="hover:text-color-1 transition-colors dark:hover:text-themecolor-skydark md:dark:hover:text-themecolor-sky py-4 md:py-0 hover:bg-slate-200 md:hover:bg-transparent">
               <NavLink
+                className={({ isActive }) =>
+                  isActive ? "text-color-1 dark:text-themecolor-sky" : undefined
+                }
                 to="/contact"
                 onClick={openNavigation ? handleMenuItemsClick : undefined}
               >
