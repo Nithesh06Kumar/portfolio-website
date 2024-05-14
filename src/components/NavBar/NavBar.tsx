@@ -51,7 +51,7 @@ const NavBar: React.FC = () => {
       <div
         className={`${
           openNavigation && "mb-[50px]"
-        } sm:pl-8 pl-4 md:pl-0 md:mb-0 `}
+        } flex sm:pl-8 pl-4 md:pl-0 md:mb-0 `}
       >
         <NavLink to="/">
           <h2 className="text-xl font-medium text-themecolor-black dark:text-themecolor-sky">
