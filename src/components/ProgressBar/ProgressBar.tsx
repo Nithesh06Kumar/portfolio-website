@@ -1,3 +1,4 @@
+import { motion } from "framer-motion";
 import React from "react";
 
 interface ProgressProp {
@@ -18,12 +19,16 @@ const ProgressBar: React.FC<ProgressProp> = ({
       )}
       <div className="pb-5">
         <div className="bg-color-4 relative h-5 w-full rounded-2xl">
-          <div
+          <motion.div
+            initial={{ width: 0 }}
+            whileInView={{ width: percentage }}
+            viewport={{ once: true }}
+            transition={{ duration: 1 }}
             className={`bg-color-5 absolute top-0 left-0 h-full rounded-2xl text-xs flex items-center justify-center`}
             style={{ width: percentage }}
           >
             {percentage}
-          </div>
+          </motion.div>
         </div>
       </div>
     </div>
