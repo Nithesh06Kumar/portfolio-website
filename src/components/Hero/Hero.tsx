@@ -3,16 +3,34 @@ import { images } from "../../assets";
 import { FaXTwitter, FaGithub, FaLinkedinIn } from "react-icons/fa6";
 import { SiGmail } from "react-icons/si";
 import { MdAddIcCall } from "react-icons/md";
+import { motion } from "framer-motion";
+
 const Hero = () => {
   return (
     <div className=" md:flex md:justify-between md:w-full sm:ml-0">
-      <div className="md:flex-shrink-0 mx-auto md-mx-0 order-3 h-[40%] w-[80%] md:w-[38%] lg:w-[350px]  md:h-[65%] bg-color-3 dark:bg-themecolor-sky rounded-[65%/25%_35%_90%_90%] overflow-hidden drop-shadow-[0_20px_25px_rgba(1,0,0,0.6)] dark:drop-shadow-[0_15px_35px_rgba(255,255,255,0.6)] hover:scale-110 transition-all delay-100 -rotate-[0.6deg]">
+      <motion.div
+        initial={{ y: 0, x: 300 }}
+        animate={{
+          y: 30,
+          transition: {
+            repeat: Infinity,
+            repeatType: "loop",
+            ease: "easeInOut",
+            duration: 1,
+          },
+        }}
+        whileInView={{ x: 0 }}
+        transition={{
+          duration: 1,
+        }}
+        className="md:flex-shrink-0 mx-auto md-mx-0 order-3 h-[40%] w-[80%] md:w-[38%] lg:w-[350px]  md:h-[65%] bg-color-3 dark:bg-themecolor-sky rounded-[65%/25%_35%_90%_90%] overflow-hidden drop-shadow-[0_20px_25px_rgba(1,0,0,0.6)] dark:drop-shadow-[0_15px_35px_rgba(255,255,255,0.6)] hover:scale-110 transition-all delay-50 -rotate-[0.6deg]"
+      >
         <img
           src={images.profileTransparent}
           alt="profile"
           className="relative -top-8 -left-1"
         />
-      </div>
+      </motion.div>
       <div className=" order-2 mt-12 text-center md:text-left md:ml-8 lg:mr-6">
         <h2 className="text-5xl font-semibold text-wrap dark:text-white">
           Hi, I'am
