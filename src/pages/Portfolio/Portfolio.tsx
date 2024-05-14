@@ -3,7 +3,7 @@ import useWindowDimensions from "../../hooks/useWindowDiamention";
 import { FaGithub } from "react-icons/fa6";
 import { motion } from "framer-motion";
 import { FaHandPointDown } from "react-icons/fa";
-const Portfolio = () => {
+const Portfolio: React.FC = () => {
   const { height } = useWindowDimensions();
   return (
     <div

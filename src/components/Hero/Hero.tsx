@@ -5,7 +5,7 @@ import { SiGmail } from "react-icons/si";
 import { MdAddIcCall } from "react-icons/md";
 import { motion } from "framer-motion";
 
-const Hero = () => {
+const Hero: React.FC = () => {
   return (
     <div className=" md:flex md:justify-between md:w-full sm:ml-0">
       <motion.div

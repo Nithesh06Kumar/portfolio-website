@@ -7,7 +7,7 @@ import Divider from "../../components/Divider/Divider";
 import { FaLaptopCode } from "react-icons/fa6";
 import Skills from "../../components/Skills/Skills";
 
-const Resume = () => {
+const Resume: React.FC = () => {
   return (
     <div className="px-5 md:px-0">
       <h2 className="text-3xl font-semibold mb-6 mt-4 text-center flex flex-col items-center dark:text-themecolor-white">
