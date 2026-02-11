@@ -20,10 +20,17 @@ export const education = [
 ];
 export const experience = [
   {
-    title: "Associate Software Engineer",
-    subtitle: "Aug 2021 - present",
+    title: "Software Engineer",
+    subtitle: "Aug 2025 - present",
     company: "Robosoft Technologies",
     description:
-      "Currently, I'm a seasoned React Native App Developer with 3 years of experience, having worked extensively on finance app development. I've led cross-functional teams and overseen the full project lifecycle, from development to maintenance. Additionally, I've utilized React JS to build complementary websites for these apps. My experience includes actively contributing to successful app launches on both the Play Store and App Store, playing a crucial role in the deployment process. I've also taken on the responsibility of managing entire projects, directly communicating with clients to understand their needs and incorporating new requirements into our work. This experience has helped me grow in project management and client interaction, ensuring we deliver solutions that exceed expectations.",
+      "Currently working as a Software Engineer, contributing equally to both React Native mobile applications and React.js web platforms. I focus on building scalable, maintainable solutions while taking ownership of architecture decisions and feature planning. \nI collaborate closely with cross-functional teams, optimize performance, mentor junior developers, and ensure smooth releases across platforms. Over time, I’ve grown from implementing features to designing systems that balance user experience, performance, and long-term maintainability.",
+  },
+  {
+    title: "Associate Software Engineer",
+    subtitle: "Aug 2021 - 2025",
+    company: "Robosoft Technologies",
+    description:
+      "Started my journey as a React Native developer, building mobile applications for finance and enterprise clients. I worked on end-to-end app development — from implementing UI screens and integrating APIs to handling state management and app deployments. \nI contributed to multiple app launches on both the Play Store and App Store. Alongside mobile development, I also built supporting web applications using React.js. This phase helped me strengthen my fundamentals, debugging skills, and understanding of real-world product development.",
   },
 ];

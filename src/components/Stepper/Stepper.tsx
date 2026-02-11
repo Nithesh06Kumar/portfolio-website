@@ -56,7 +56,7 @@ const Stepper: React.FC<StepperProp> = ({
                 <p className="text-lg uppercase text-color-5 font-normal flex mb-[6px]">
                   {element?.subtitle}
                 </p>
-                <p className="text-base dark:text-themecolor-white mb-[2px]">
+                <p className="text-base dark:text-themecolor-white mb-[2px] whitespace-pre-line">
                   {element?.description}
                 </p>
               </div>

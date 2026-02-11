@@ -12,7 +12,7 @@ const Contact: React.FC = () => {
       </h2>
       <div className="border-2 border-slate-800  rounded-md overflow-hidden my-8  shadow-[0_0_20px_1px_rgba(0,0,0,0.6)] dark:shadow-[0_0_20px_1px_rgba(255,255,255,0.6)]">
         <iframe
-          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d7784.008716596831!2d74.94825834549853!3d12.713138266151713!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3ba3603d0ecc380f%3A0xfc520a487ea51cd6!2sMiyapadavu%2C%20Kerala!5e0!3m2!1sen!2sin!4v1715681580329!5m2!1sen!2sin"
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d31161.94730152567!2d74.94487515687797!3d12.500018749763827!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3ba482155de6aad1%3A0x3a07d5464844020a!2sKasaragod%2C%20Kerala!5e0!3m2!1sen!2sin!4v1770818473243!5m2!1sen!2sin"
           width={"100%"}
           height={"400px"}
           style={{ border: 0 }}
