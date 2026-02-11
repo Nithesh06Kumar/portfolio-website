@@ -36,21 +36,21 @@ const About: React.FC = () => {
       <div className="flex md:hidden justify-between px-16 mt-10 space-x-2">
         <div className="block text-center">
           <h2 className="text-3xl font-semibold dark:text-themecolor-white">
-            3+
+            4.5+
           </h2>
           <p className="dark:text-themecolor-white">Years Experience</p>
         </div>
         <div className="block text-center">
           <h2 className="text-3xl font-semibold dark:text-themecolor-white">
-            2+
+            3+
           </h2>
           <p className="dark:text-themecolor-white">Completed Certifications</p>
         </div>
         <div className="block text-center">
           <h2 className="text-3xl font-semibold dark:text-themecolor-white">
-            1+
+            1
           </h2>
-          <p className="dark:text-themecolor-white">Companies Worked</p>
+          <p className="dark:text-themecolor-white">Company Worked</p>
         </div>
       </div>
       <div className="mx-auto mt-8 ">
