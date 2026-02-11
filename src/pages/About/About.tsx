@@ -57,7 +57,7 @@ const About: React.FC = () => {
         <Button
           onClick={() =>
             downloadResumeFromPublic(
-              `/src/assets/About/resume.pdf`,
+              `/resume.pdf`,
               "Nithesh_Kumar_Software_Engineer.pdf",
             )
           }
