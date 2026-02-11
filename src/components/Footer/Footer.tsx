@@ -5,7 +5,7 @@ const Footer: React.FC = () => {
     <div className="pb-10">
       <div className="border-t-2 mb-4" />
       <p className="text-center dark:text-themecolor-white">
-        @2024 nitheshkumar, IN. All Rights Reserved.
+        @2026 nitheshkumar, IN. All Rights Reserved.
       </p>
     </div>
   );

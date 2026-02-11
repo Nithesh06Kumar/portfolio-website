@@ -2,6 +2,7 @@ import React from "react";
 import { images } from "../../assets";
 import Button from "../../components/Button/Button";
 import { MdOutlineFileDownload } from "react-icons/md";
+import { downloadResumeFromPublic } from "../../utils/downloadResume";
 
 const About: React.FC = () => {
   return (
@@ -22,7 +23,7 @@ const About: React.FC = () => {
           height={420}
         />
         <p className="text-lg text-center md:text-left dark:text-themecolor-white">
-          As a seasoned software developer with three years of industry
+          As a seasoned software developer with 4.5 years of industry
           experience, I specialize in crafting user-centric mobile applications
           using React Native and dynamic websites with ReactJS. Passionate about
           creating seamless user experiences, I prioritize functionality and
@@ -53,7 +54,15 @@ const About: React.FC = () => {
         </div>
       </div>
       <div className="mx-auto mt-8 ">
-        <Button onClick={() => {}} className="flex items-center">
+        <Button
+          onClick={() =>
+            downloadResumeFromPublic(
+              `/src/assets/About/resume.pdf`,
+              "Nithesh_Kumar_Software_Engineer.pdf",
+            )
+          }
+          className="flex items-center"
+        >
           Download Resume
           <MdOutlineFileDownload className="ml-2" size={20} />
         </Button>

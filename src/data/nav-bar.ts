@@ -32,9 +32,9 @@ export const navbarData: TNavbar = {
     },
     {
       id: 4,
-      title: "Portfolio",
-      link: "/portfolio",
-      innerLink: false,
+      title: "Skills",
+      link: "/resume/#skill-section",
+      innerLink: true,
     },
     {
       id: 5,
